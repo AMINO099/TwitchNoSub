@@ -20,7 +20,7 @@ window.Worker = class Worker extends oldWorker {
 
         this.addEventListener("message", (event) => {
             const { data } = event;
-            if ((data.id === 1 || isVariantA) && data.type === 1) {
+            ((data.id === 1 || isVariantA) && data.type === 1) {
                 this.postMessage({ ...data, arg: [data.arg] });
             }
         });
